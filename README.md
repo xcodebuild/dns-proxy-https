@@ -1,6 +1,6 @@
 ## dns-proxy-https
 
-DNS proxy server over [Google Public DNS](https://dns.google.com/) with socks supported
+DNS proxy server over [Google Public DNS](https://dns.google.com/) with socks proxy supported
 
 Give you a pollution-free and safe local DNS Server(0.0.0.0:53)，but maybe not so fast.
 ## Usage
