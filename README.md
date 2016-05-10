@@ -8,8 +8,8 @@ Give you a pollution-free and safe local DNS Server(0.0.0.0:53)，but maybe not 
 ``` shell
 sudo npm install -g dns-proxy-https
 sudo dns-proxy-https -s 127.0.0.1 -p 1081
-# sudo dns-proxy-https -s 127.0.0.1 -p 1081 -l 8.8.8.8 -t 5000
-# sudo dns-proxy-https -s 127.0.0.1 -p 1081 -l 8.8.8.8 -t 5000 -w whitelist.txt
+# sudo dns-proxy-https -s 127.0.0.1 -p 1081 -f 223.5.5.5 -t 5000
+# sudo dns-proxy-https -s 127.0.0.1 -p 1081 -f 223.5.5.5 -t 5000 -w whitelist.txt
 ```
 
 Then set your DNS Server to `127.0.0.1`
