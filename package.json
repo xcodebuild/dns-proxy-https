@@ -1,0 +1,33 @@
+{
+  "name": "dns-proxy-https",
+  "version": "0.0.1",
+  "bin": {
+    "dns-proxy-https": "./build/src/index.js"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/gulp compile"
+  },
+  "dependencies": {
+    "command-line-args": "^2.1.6",
+    "memory-cache": "^0.1.5",
+    "native-dns": "^0.7.0",
+    "request": "^2.72.0",
+    "socks5-https-client": "^1.1.2",
+    "source-map-support": "^0.3.1"
+  },
+  "devDependencies": {
+    "babel": "^4.7.12",
+    "babel-eslint": "^2.0.2",
+    "chai": "^3.0.0",
+    "estraverse": "^4.2.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-eslint": "^0.14.0",
+    "gulp-header": "^1.2.2",
+    "gulp-mocha": "^2.1.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.5"
+  }
+}
