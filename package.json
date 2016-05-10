@@ -1,6 +1,6 @@
 {
   "name": "dns-proxy-https",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": {
     "dns-proxy-https": "./build/src/index.js"
   },
