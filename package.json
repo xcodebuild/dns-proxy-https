@@ -5,7 +5,8 @@
     "dns-proxy-https": "./build/src/index.js"
   },
   "scripts": {
-    "build": "node_modules/.bin/gulp compile"
+    "build": "node_modules/.bin/gulp compile",
+    "install": "node_modules/.bin/gulp compile"
   },
   "dependencies": {
     "command-line-args": "^2.1.6",
