@@ -9,7 +9,7 @@ import {makeAnswer} from './utils';
 const GOOGLE_DNS = 'dns.google.com';
 
 let cli = commandLineArgs([
-  {name: 'socks_host', alias: 'h', type: String,
+  {name: 'socks_host', alias: 's', type: String,
    description: 'Host of socks proxy(optional)', defaultValue: null},
   {name: 'socks_port', alias: 'p', type: Number,
    description: 'Port of socks proxy(default 1080)', defaultValue: 1080},
@@ -19,7 +19,19 @@ let cli = commandLineArgs([
    description: 'Cache time(ms, Default 3000)', defaultValue: 3000}
 ]);
 
+const app = {
+  title: 'dns-proxy-https',
+  description: 'DNS proxy server over Google HTTPS DNS Service with socks supported',
+  synopsis: [
+    '$ sudo dns-proxy-https -s 127.0.0.1 -p 1081',
+    '$ sudo dns-proxy-https -s 127.0.0.1 -p 1081 -l 8.8.8.8 -t 5000'
+  ],
+  footer: 'Project home: [dns-proxy-https]{https://github.com/CodeFalling/dns-proxy-https}'
+};
+
 let option = cli.parse();
+
+console.log(cli.getUsage(app));
 
 function requestOverHTTPS(name){
   return new Promise((reslove, reject) => {
