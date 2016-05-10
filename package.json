@@ -12,10 +12,12 @@
     "command-line-args": "^2.1.6",
     "is-root": "^1.0.0",
     "memory-cache": "^0.1.5",
+    "micromatch": "^2.3.8",
     "native-dns": "^0.7.0",
     "request": "^2.72.0",
     "socks5-https-client": "^1.1.2",
-    "source-map-support": "^0.3.1"
+    "source-map-support": "^0.3.1",
+    "winston": "^2.2.0"
   },
   "devDependencies": {
     "babel": "^4.7.12",

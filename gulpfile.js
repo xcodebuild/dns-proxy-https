@@ -22,10 +22,10 @@ gulp.task('test', ['clean','compile'], function(){
 
 gulp.task('compile',['lint'], function(){
   return gulp.src('src/**/*.js')
-    .pipe(header("require('source-map-support').install();"))
-    .pipe(sourcemap.init())
+//    .pipe(header("require('source-map-support').install();"))
+//    .pipe(sourcemap.init())
     .pipe(compiler())
-    .pipe(sourcemap.write("."))
+//    .pipe(sourcemap.write("."))
     .pipe(insert.prepend('#!/usr/bin/env node\n'))
     .pipe(gulp.dest("build/src"));
 });
