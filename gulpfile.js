@@ -7,6 +7,7 @@ var gulp = require("gulp"),
     eslint = require('gulp-eslint'),
     plumber = require('gulp-plumber'),
     clean = require("gulp-clean");
+    insert = require('gulp-insert');
 
 gulp.task('default', ['test']);
 
@@ -25,6 +26,7 @@ gulp.task('compile',['lint'], function(){
     .pipe(sourcemap.init())
     .pipe(compiler())
     .pipe(sourcemap.write("."))
+    .pipe(insert.prepend('#!/usr/bin/env node\n'))
     .pipe(gulp.dest("build/src"));
 });
 
