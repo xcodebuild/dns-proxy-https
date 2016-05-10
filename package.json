@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "command-line-args": "^2.1.6",
+    "is-root": "^1.0.0",
     "memory-cache": "^0.1.5",
     "native-dns": "^0.7.0",
     "request": "^2.72.0",

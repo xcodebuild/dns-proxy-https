@@ -3,6 +3,7 @@ import dns from 'native-dns';
 import Agent from 'socks5-https-client/lib/Agent';
 import request from 'request';
 import memory from 'memory-cache';
+import isRoot from 'is-root';
 
 import {makeAnswer} from './utils';
 
@@ -32,6 +33,13 @@ const app = {
 let option = cli.parse();
 
 console.log(cli.getUsage(app));
+
+// help end
+
+// check sudo
+if (!isRoot()) {
+  throw new Error('Please run dns-proxy-https with sudo!');
+}
 
 function requestOverHTTPS(name){
   return new Promise((reslove, reject) => {
