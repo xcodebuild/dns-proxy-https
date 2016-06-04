@@ -18,7 +18,7 @@ Then set your DNS Server to `127.0.0.1`
 
 Maybe you would like to have a whitelist of domains with your fallback DNS(such as `114.114.114.114`) to be CDN friendly.
 
-There is already a list file for Chinsese user: [https://raw.githubusercontent.com/CodeFalling/dns-proxy-https/master/chainWhiteList.txt](https://raw.githubusercontent.com/CodeFalling/dns-proxy-https/master/chainWhiteList.txt)
+There is already a list file for Chinese user: [https://raw.githubusercontent.com/CodeFalling/dns-proxy-https/master/chainWhiteList.txt](https://raw.githubusercontent.com/CodeFalling/dns-proxy-https/master/chainWhiteList.txt)
 
 You can download it and use with dns-proxy-https.
 
