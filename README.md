@@ -7,16 +7,16 @@ Give you a pollution-free and safe local DNS Server(0.0.0.0:53)，but maybe not 
 
 ``` shell
 sudo npm install -g dns-proxy-https
-sudo dns-proxy-https -s 127.0.0.1 -p 1081
-# sudo dns-proxy-https -s 127.0.0.1 -p 1081 -f 223.5.5.5 -t 5000
-# sudo dns-proxy-https -s 127.0.0.1 -p 1081 -f 223.5.5.5 -t 5000 -w whitelist.txt
+sudo dns-proxy-https -s 127.0.0.1 -p 1080
+# sudo dns-proxy-https -s 127.0.0.1 -p 1080 -f 223.5.5.5 -t 5000
+# sudo dns-proxy-https -s 127.0.0.1 -p 1080 -f 223.5.5.5 -t 5000 -w whitelist.txt
 ```
 
 Then set your DNS Server to `127.0.0.1`
 
 ## Whitelist
 
-Maybe you would like to have a whitelist of domains with your fallback DNS(such as `114.114.114.114`) to be CDN friendly.
+Maybe you would like to have a whitelist of domains with your fallback DNS(such as `223.5.5.5`) to be CDN friendly.
 
 There is already a list file for Chinese user: [https://raw.githubusercontent.com/CodeFalling/dns-proxy-https/master/chainWhiteList.txt](https://raw.githubusercontent.com/CodeFalling/dns-proxy-https/master/chainWhiteList.txt)
 
