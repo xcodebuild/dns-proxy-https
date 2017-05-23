@@ -29,9 +29,9 @@ Options
 
   -s, --socks_host string       Host of socks proxy(optional)
   -p, --socks_port number       Port of socks proxy(default 1080)
-  -f, --fallback string         DNS to reslove Google DNS address once and
+  -f, --fallback string         DNS to resolve Google DNS address once and
                                 whitelist(Default 8.8.8.8)
   -t, --cache_time number       Cache time(ms, Default 300000)
-  -w, --whitelist_file string   Whitelist file contains domains to reslove by
+  -w, --whitelist_file string   Whitelist file contains domains to resolve by
                                 fallback directly
 ```

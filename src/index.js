@@ -19,11 +19,11 @@ let cli = commandLineArgs([
   {name: 'socks_port', alias: 'p', type: Number,
    description: 'Port of socks proxy(default 1080)', defaultValue: 1080},
   {name: 'fallback', alias: 'f', type: String,
-   description: 'DNS to reslove Google DNS address once and whitelist(Default 8.8.8.8)', defaultValue: '8.8.8.8'},
+   description: 'DNS to resolve Google DNS address once and whitelist(Default 8.8.8.8)', defaultValue: '8.8.8.8'},
   {name: 'cache_time', alias: 't', type: Number,
    description: 'Cache time(ms, Default 300000)', defaultValue: 300000},
   {name: 'whitelist_file', alias: 'w', type: String,
-   description: 'Whitelist file contains domains to reslove by fallback directly', defaultValue: null}
+   description: 'Whitelist file contains domains to resolve by fallback directly', defaultValue: null}
 ]);
 
 const app = {
@@ -63,7 +63,7 @@ if (option.whitelist_file) {
 }
 
 function requestOverHTTPS(name){
-  return new Promise((reslove, reject) => {
+  return new Promise((resolve, reject) => {
     request({
       url: `https://${GOOGLE_DNS}/resolve?name=${name}`,
       agentClass: option.socks_host ? Agent : null,
@@ -75,7 +75,7 @@ function requestOverHTTPS(name){
       if (err) {
         reject(err);
       } else {
-        reslove(res);
+        resolve(res);
       }
     });
   });
@@ -161,8 +161,8 @@ server.on('error', (err) => console.error(err.stack));
 server.on('socketError', (err) => console.error(err));
 
 // init
-// Reslove GOOGLE_DNS then Start
-winston.info(`Resloving Google DNS Service using ${option.fallback}...`);
+// Resolve GOOGLE_DNS then Start
+winston.info(`Resolving Google DNS Service using ${option.fallback}...`);
 
 dns.resolve(GOOGLE_DNS, 'A', option.fallback, function (err) {
   if (err) {
